@@ -33,6 +33,7 @@ const ProfileScreen = ({ location, history }) => {
       history.push('/login');
     } else {
       if (!user.name || success) {
+        // section 15: bug fixes
         dispatch({ type: USER_UPDATE_PROFILE_RESET });
         dispatch(getUserDetails('profile'));
       } else {
